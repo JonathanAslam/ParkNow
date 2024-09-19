@@ -5,7 +5,7 @@ Simple app that allows users to navigate to a list of nearby parking areas, wher
 <br>
 <b>Languages:</b> <br>
 HTML, CSS, Javascript ( React Native Framwork) <br>
-<b>IDE</b> <br>
+<b>IDE:</b> <br>
 Visual Studio Code
 
 
