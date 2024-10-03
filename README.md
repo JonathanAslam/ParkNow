@@ -10,10 +10,6 @@ Visual Studio Code
 <br>
 <b>Updates:<b> <br>
 <b><span>10/03/24:<span><b> <br>
-<ul>
-    <ol> hello</ol>
-    <ol> hello</ol>
-    <ol> hello</ol>
-    <ol> hello</ol>
-</ul>
-
+- hello
+- hello 
+- hello
