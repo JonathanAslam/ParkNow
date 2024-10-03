@@ -1,9 +1,12 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Button, Alert } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View } from 'react-native-reanimated/lib/typescript/Animated'; //issue arises when using View tag? search for reason
+import CustomButton from '@/components/Buttons/LoginButton';
 
 export default function HomeScreen() {
   return (
@@ -15,6 +18,13 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+        {/* login button, created in separate file (/components/Buttons/LoginButton.tsx) */}
+         <CustomButton text='Login'/>
+         <CustomButton text='Create Account'/>
+
+
+
+{/* 
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
@@ -45,12 +55,19 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView>
+      </ThemedView> */}
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  //styles we created ourself
+  container: { //default container used for title page
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 8,
+  },
+  //default styles created on download
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
