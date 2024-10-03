@@ -10,7 +10,7 @@ import { ThemedView } from '@/components/ThemedView';
 
 // login page created by us, index and explore (now called navigation) pages created by default download
 
-export default function TabTwoScreen() {
+export default function TabThreeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}

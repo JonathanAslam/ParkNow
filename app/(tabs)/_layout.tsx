@@ -16,9 +16,20 @@ export default function TabLayout() {
       }}>
       {/* screens given by default files */}
       <Tabs.Screen
+        name="signin"
+        options={{
+          title: 'SignIn',
+          tabBarActiveTintColor: '#5800BB',
+          tabBarIcon: ({color, focused }) => (
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#5800BB"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
+          tabBarActiveTintColor: '#5800BB',
           tabBarIcon: ({color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#5800BB"} />
           ),
@@ -28,6 +39,7 @@ export default function TabLayout() {
         name="navigation"
         options={{
           title: 'Navigation',
+          tabBarActiveTintColor: '#5800BB',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'car' : 'car-outline'} color={"#5800BB"} /> ////used website: https://icon-sets.iconify.design/ion/log-in-outline/ to help identify names that are used for icons with react and stuff
           ),
@@ -38,6 +50,7 @@ export default function TabLayout() {
         name="login"
         options={{
           title: 'Login',
+          tabBarActiveTintColor: '#5800BB',
           tabBarIcon: ({color, focused}) => (
             <TabBarIcon name={focused ? 'log-in' : 'log-in-outline'} color={"#5800BB"} />  //used website: https://icon-sets.iconify.design/ion/log-in-outline/ to help identify names that are used for icons with react and stuff
           ),
