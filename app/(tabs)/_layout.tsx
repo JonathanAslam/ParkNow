@@ -12,26 +12,37 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+        headerShown: true, //set header true to show current page at top of screen
       }}>
+      {/* screens given by default files */}
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          tabBarIcon: ({color, focused }) => (
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#5800BB"} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="navigation"
         options={{
-          title: 'Explore',
+          title: 'Navigation',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'car' : 'car-outline'} color={"#5800BB"} /> ////used website: https://icon-sets.iconify.design/ion/log-in-outline/ to help identify names that are used for icons with react and stuff
           ),
         }}
       />
+      {/* screens we defined ourself */}
+      <Tabs.Screen //login screen we made ourself
+        name="login"
+        options={{
+          title: 'Login',
+          tabBarIcon: ({color, focused}) => (
+            <TabBarIcon name={focused ? 'log-in' : 'log-in-outline'} color={"#5800BB"} />  //used website: https://icon-sets.iconify.design/ion/log-in-outline/ to help identify names that are used for icons with react and stuff
+          ),
+        }}
+        />
     </Tabs>
   );
 }
