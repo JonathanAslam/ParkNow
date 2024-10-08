@@ -47,7 +47,7 @@ export default function TabLayout() {
         }}
         />
         <Tabs.Screen
-        name="signin"
+        name="createaccount"
         options={{
           title: 'CreateAccount',
           tabBarActiveTintColor: '#5800BB',
