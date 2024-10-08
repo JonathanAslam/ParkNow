@@ -11,6 +11,9 @@ import { Card } from 'react-native-paper';
 const CreateAccount: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
+
 
   const navigation = useNavigation();
   const handleLogin = () => {
@@ -27,6 +30,22 @@ const CreateAccount: React.FC = () => {
     <View style={styles.container}>
       <Card style={styles.card}>
         <Text style={styles.title}>Create Account</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="First Name"
+          value={fname}
+          onChangeText={setFname}
+          keyboardType="default"
+          autoCapitalize="words" // auto capitalize word since its a name
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Last Name"
+          value={lname}
+          onChangeText={setLname}
+          keyboardType="default"
+          autoCapitalize="none" // auto capitalize word since its a name
+        />        
         <TextInput
           style={styles.input}
           placeholder="Email"
