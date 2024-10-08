@@ -7,16 +7,18 @@ import { ThemedView } from '@/components/ThemedView';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View } from 'react-native-reanimated/lib/typescript/Animated'; //issue arises when using View tag? search for reason
 import CustomButton from '@/components/Buttons/LoginButton';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#C8C8C8' }}
       headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
+        // <Image
+        //   source={require('@/assets/images/partial-react-logo.png')}
+        //   style={styles.reactLogo}
+        // />
+        <Ionicons size={310} name="home-outline" style={styles.headerImage} />
       }>
         {/* login button, created in separate file (/components/Buttons/LoginButton.tsx) */}
          <CustomButton text='Login'/>
@@ -66,6 +68,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginHorizontal: 8,
+  },
+    headerImage: {
+    color: '#808080',
+    bottom: -90,
+    left: -35,
+    position: 'absolute',
   },
   //default styles created on download
   titleContainer: {

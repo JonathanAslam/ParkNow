@@ -16,23 +16,13 @@ export default function TabLayout() {
       }}>
       {/* screens given by default files */}
       <Tabs.Screen
-        name="signin"
-        options={{
-          title: 'SignIn',
-          tabBarActiveTintColor: '#5800BB',
-          tabBarIcon: ({color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#5800BB"} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarActiveTintColor: '#5800BB',
           tabBarIcon: ({color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#5800BB"} />
-          ),
+          ), //focused is icon when selected, after the : is the icon when not selected. allows for effect to change when on a new tab, highlighting which tab we are in
         }}
       />
       <Tabs.Screen
@@ -42,7 +32,7 @@ export default function TabLayout() {
           tabBarActiveTintColor: '#5800BB',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'car' : 'car-outline'} color={"#5800BB"} /> ////used website: https://icon-sets.iconify.design/ion/log-in-outline/ to help identify names that are used for icons with react and stuff
-          ),
+          ),  
         }}
       />
       {/* screens we defined ourself */}
@@ -56,6 +46,16 @@ export default function TabLayout() {
           ),
         }}
         />
+        <Tabs.Screen
+        name="signin"
+        options={{
+          title: 'CreateAccount',
+          tabBarActiveTintColor: '#5800BB',
+          tabBarIcon: ({color, focused }) => (
+            <TabBarIcon name={focused ? 'person' : 'person-outline'} color={"#5800BB"} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

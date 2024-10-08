@@ -1,12 +1,14 @@
 //helped from internet, check saved tabs
 
 // src/components/Login.tsx
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation } from 'expo-router';
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { Card } from 'react-native-paper';
 
-const Login: React.FC = () => {
+const CreateAccount: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,9 +21,12 @@ const Login: React.FC = () => {
   };
 
   return (
+    <ParallaxScrollView
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerImage={<Ionicons size={310} name="person-outline" style={styles.headerImage} />}> 
     <View style={styles.container}>
       <Card style={styles.card}>
-        <Text style={styles.title}>Login</Text>
+        <Text style={styles.title}>Create Account</Text>
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -40,6 +45,7 @@ const Login: React.FC = () => {
         <Button title="Login" onPress={handleLogin}  />
       </Card>
     </View>
+    </ParallaxScrollView>
   );
 };
 
@@ -63,6 +69,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
   },
+  headerImage: {
+    color: '#808080',
+    bottom: -90,
+    left: -35,
+    position: 'absolute',
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    gap: 8,
+  },
 });
 
-export default Login;
+export default CreateAccount;
