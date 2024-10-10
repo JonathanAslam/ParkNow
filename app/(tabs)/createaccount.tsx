@@ -16,10 +16,12 @@ const CreateAccount: React.FC = () => {
 
 
   const navigation = useNavigation();
-  const handleLogin = () => {
+  const handleCreateAccount = () => {
     // Implement your login logic here
     console.log('Email:', email);
-    console.log('Password:', password);
+    console.log('Password:', password);   //add console log for user first and last name
+    console.log('First name:', fname);
+    console.log('Last name:', lname);
     // navigation.navigate('navigation');
   };
 
@@ -61,7 +63,7 @@ const CreateAccount: React.FC = () => {
           onChangeText={setPassword}
           secureTextEntry
         />
-        <Button title="Login" onPress={handleLogin}  />
+        <Button title="Login" onPress={handleCreateAccount}  />
       </Card>
     </View>
     </ParallaxScrollView>
